@@ -1,0 +1,140 @@
+/* =====================================================================
+   ASCII Art Generator Pro — app.css
+   Extends the shared design system (base.css). Colors derive ONLY from
+   base.css CSS variables so dark + light themes both work.
+   ===================================================================== */
+
+/* ---- Theme toggle icon swap (sun in dark, moon in light) ---- */
+[data-theme="light"] .icon-sun { display: none; }
+.icon-moon { display: none; }
+
+/* ===================== Toolbar / options panel ===================== */
+.toolbar-panel { padding: var(--space-4) var(--space-5); }
+
+.input-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+.input-row input {
+  flex: 1;
+  font-size: 15px;
+}
+.char-count {
+  white-space: nowrap;
+  font-size: 12px;
+  flex: none;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3) var(--space-4);
+}
+.toolbar-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+.toolbar .spacer { flex: 1; }
+
+.field-label { white-space: nowrap; font-size: 13px; }
+
+.hint {
+  margin: var(--space-4) 0 0;
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+
+/* Segmented font picker uses base.css's .segmented / button styling as-is;
+   no overrides needed here. */
+
+/* ===================== Banner preview panel ===================== */
+.banner-panel {
+  margin-top: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+}
+.pane-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--border);
+}
+.pane-title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+.pane-meta { font-size: 12px; }
+
+.banner-scroll {
+  position: relative;
+  min-height: 260px;
+  /* House-style rule: wide content scrolls inside its own container,
+     it never causes the page itself to scroll horizontally. */
+  overflow: auto;
+}
+.banner-code {
+  margin: 0;
+  padding: var(--space-6) var(--space-5);
+  font-size: 14px;
+  line-height: 1.35;
+  white-space: pre;
+  min-height: 100%;
+  color: var(--brand-400);
+  tab-size: 2;
+}
+.banner-code:empty { display: none; }
+
+[data-theme="light"] .banner-code { color: var(--brand-600); }
+
+/* ===================== Banner empty state ===================== */
+.banner-empty {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  pointer-events: none;
+}
+.banner-empty p { margin: 0; }
+.banner-empty.is-hidden { display: none; }
+
+/* ===================== Shortcuts modal table ===================== */
+.shortcut-table { width: 100%; border-collapse: collapse; }
+.shortcut-table td {
+  padding: 10px 4px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+.shortcut-table tr:last-child td { border-bottom: none; }
+.shortcut-table td:last-child { text-align: right; white-space: nowrap; }
+.shortcut-table kbd + kbd { margin-left: 4px; }
+
+/* ===================== Responsive ===================== */
+@media (max-width: 720px) {
+  .toolbar .spacer { display: none; }
+  .toolbar-group { width: 100%; }
+  .toolbar-group .btn { flex: 1; }
+  .input-row { flex-wrap: wrap; }
+  .input-row input { width: 100%; }
+  .segmented { width: 100%; }
+  .segmented button { flex: 1; text-align: center; }
+}
+
+@media (max-width: 460px) {
+  .banner-code { font-size: 11px; padding: var(--space-4) var(--space-3); }
+}
