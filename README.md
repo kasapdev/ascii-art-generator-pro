@@ -1,6 +1,6 @@
 # ASCII Art Generator Pro
 
-[![CI](https://github.com/kasapdev/ascii-art-generator-pro/actions/workflows/ci.yml/badge.svg)](https://github.com/kasapdev/ascii-art-generator-pro/actions/workflows/ci.yml)
+[![CI](https://github.com/kasapdev/ascii-art-generator-pro/actions/workflows/ci.yml/badge.svg)](https://github.com/kasapdev/ascii-art-generator-pro/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) ![Vanilla JS](https://img.shields.io/badge/Vanilla-JS-F7DF1E?logo=javascript&logoColor=black)
 
 Turn text into large ASCII-art banners with 3 hand-built bitmap fonts — fast, private, and fully offline.
 
