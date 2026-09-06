@@ -5,8 +5,9 @@
    ===================================================================== */
 
 /* ---- Theme toggle icon swap (sun in dark, moon in light) ---- */
-[data-theme="light"] .icon-sun { display: none; }
 .icon-moon { display: none; }
+[data-theme="light"] .icon-sun { display: none; }
+[data-theme="light"] .icon-moon { display: inline; }
 
 /* ===================== Toolbar / options panel ===================== */
 .toolbar-panel { padding: var(--space-4) var(--space-5); }
